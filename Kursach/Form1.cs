@@ -19,15 +19,31 @@ namespace Kursach
         //функция проверки ввода данных в textbox
         bool checkInput(object sender, KeyPressEventArgs e, TextBox textBox)
         {
-            if (rbHexaSys1.Checked == true || comboBox1.SelectedIndex == 3)
+            if (rbBinarySys1.Checked == true || comboBox1.SelectedIndex == 0)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || 
-                    (int)e.KeyChar == 44 || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8))
                     return false;
                 else return true;
             }
-            else if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
-                return false;
+            if (rbOctalSys1.Checked == true || comboBox1.SelectedIndex == 1)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8))
+                    return false;
+                else return true;
+            }
+            if (rbDecimalSys1.Checked == true || comboBox1.SelectedIndex == 2)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8))
+                    return false;
+                else return true;
+            }
+            if (rbHexaSys1.Checked == true || comboBox1.SelectedIndex == 3)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                    return false;
+                else return true;
+            }
             else return true;
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,6 +68,7 @@ namespace Kursach
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            //---ОПЕРАЦИИ ПЕРЕВОДА---
             //десятичная в двоичную и обратно
             if (rbDecimalSys1.Checked == true && rbBinarySys2.Checked == true)
             {
@@ -60,36 +77,36 @@ namespace Kursach
             }
             if (rbBinarySys1.Checked == true && rbDecimalSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 2);
-                textBox2.Text = Convert.ToString(decimalValue, 10);
+                int binaryValue = Convert.ToInt32(textBox1.Text, 2);
+                textBox2.Text = Convert.ToString(binaryValue, 10);
             }
             //двоичная в восьмиричную и обратно
             if (rbOctalSys1.Checked == true && rbBinarySys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 8);
-                textBox2.Text = Convert.ToString(decimalValue, 2);
+                int octalValue = Convert.ToInt32(textBox1.Text, 8);
+                textBox2.Text = Convert.ToString(octalValue, 2);
             }
             if (rbBinarySys1.Checked == true && rbOctalSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 2);
-                textBox2.Text = Convert.ToString(decimalValue, 8);
+                int binaryValue = Convert.ToInt32(textBox1.Text, 2);
+                textBox2.Text = Convert.ToString(binaryValue, 8);
             }
             //двоичная в шестнадцатиричную и обратно
             if (rbHexaSys1.Checked == true && rbBinarySys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 16);
-                textBox2.Text = Convert.ToString(decimalValue, 2);
+                int hexaValue = Convert.ToInt32(textBox1.Text, 16);
+                textBox2.Text = Convert.ToString(hexaValue, 2);
             }
             if (rbBinarySys1.Checked == true && rbHexaSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 2);
-                textBox2.Text = Convert.ToString(decimalValue, 16);
+                int binaryValue = Convert.ToInt32(textBox1.Text, 2);
+                textBox2.Text = Convert.ToString(binaryValue, 16);
             }
             //восьмиричная в десятичную и обратно
             if (rbOctalSys1.Checked == true && rbDecimalSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 8);
-                textBox2.Text = Convert.ToString(decimalValue, 10);
+                int octalValue = Convert.ToInt32(textBox1.Text, 8);
+                textBox2.Text = Convert.ToString(octalValue, 10);
             }
             if (rbDecimalSys1.Checked == true && rbOctalSys2.Checked == true)
             {
@@ -99,13 +116,13 @@ namespace Kursach
             //восьмиричная в шестнадцатиричную и обратно
             if (rbOctalSys1.Checked == true && rbHexaSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 8);
-                textBox2.Text = Convert.ToString(decimalValue, 16);
+                int octalValue = Convert.ToInt32(textBox1.Text, 8);
+                textBox2.Text = Convert.ToString(octalValue, 16);
             }
             if (rbHexaSys1.Checked == true && rbOctalSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 16);
-                textBox2.Text = Convert.ToString(decimalValue, 8);
+                int hexaValue = Convert.ToInt32(textBox1.Text, 16);
+                textBox2.Text = Convert.ToString(hexaValue, 8);
             }
             //десятичная в шестнадцатиричную и обратно
             if (rbDecimalSys1.Checked == true && rbHexaSys2.Checked == true)
@@ -115,8 +132,44 @@ namespace Kursach
             }
             if (rbHexaSys1.Checked == true && rbDecimalSys2.Checked == true)
             {
-                int decimalValue = Convert.ToInt32(textBox1.Text, 16);
-                textBox2.Text = Convert.ToString(decimalValue, 10);
+                int hexaValue = Convert.ToInt32(textBox1.Text, 16);
+                textBox2.Text = Convert.ToString(hexaValue, 10);
+            }
+            //---ПРОВЕДЕНИЕ МАТЕМАТИЧЕСКИХ ОПЕРАЦИЙ---
+            //сложение двоичных чисел
+            if (rbSum.Checked == true && comboBox1.SelectedIndex == 0)
+            {
+                int binaryValue1 = Convert.ToInt32(textBox3.Text, 2);
+                int binaryValue2 = Convert.ToInt32(textBox4.Text, 2);
+                textBox5.Text = Convert.ToString(binaryValue1 + binaryValue2, 2);
+            }
+            //сложение восьмиричных чисел
+            if (rbSum.Checked == true && comboBox1.SelectedIndex == 1)
+            {
+                int octalValue1 = Convert.ToInt32(textBox3.Text, 8);
+                int octalValue2 = Convert.ToInt32(textBox4.Text, 8);
+                textBox5.Text = Convert.ToString(octalValue1 + octalValue2, 8);
+            }
+            //сложение десятичных чисел
+            if (rbSum.Checked == true && comboBox1.SelectedIndex == 2)
+            {
+                int decimalValue1 = Convert.ToInt32(textBox3.Text, 10);
+                int decimalValue2 = Convert.ToInt32(textBox4.Text, 10);
+                textBox5.Text = Convert.ToString(decimalValue1 + decimalValue2, 10);
+            }
+            //сложение шестнадцатиричных чисел
+            if (rbSum.Checked == true && comboBox1.SelectedIndex == 3)
+            {
+                int hexalValue1 = Convert.ToInt32(textBox3.Text, 16);
+                int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
+                textBox5.Text = Convert.ToString(hexalValue1 + hexalValue2, 16);
+            }
+            //сложение двоичных чисел
+            if (rbDevide.Checked == true && comboBox1.SelectedIndex == 0)
+            {
+                int binaryValue1 = Convert.ToInt32(textBox3.Text, 2);
+                int binaryValue2 = Convert.ToInt32(textBox4.Text, 2);
+                textBox5.Text = Convert.ToString(binaryValue1 / binaryValue2, 2);
             }
         }
         

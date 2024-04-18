@@ -39,10 +39,10 @@ namespace Kursach
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rbSum = new System.Windows.Forms.RadioButton();
+            this.rbMinus = new System.Windows.Forms.RadioButton();
+            this.rbMultiply = new System.Windows.Forms.RadioButton();
+            this.rbDevide = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -58,8 +58,10 @@ namespace Kursach
             this.rbOctalSys2 = new System.Windows.Forms.RadioButton();
             this.rbDecimalSys2 = new System.Windows.Forms.RadioButton();
             this.rbHexaSys2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbOrigNumSys.SuspendLayout();
             this.gbReqNumSys.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -150,53 +152,53 @@ namespace Kursach
             this.label4.TabIndex = 14;
             this.label4.Text = "Резултат";
             // 
-            // radioButton1
+            // rbSum
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.Location = new System.Drawing.Point(386, 84);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(84, 19);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Сложение";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbSum.AutoSize = true;
+            this.rbSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbSum.Location = new System.Drawing.Point(19, 19);
+            this.rbSum.Name = "rbSum";
+            this.rbSum.Size = new System.Drawing.Size(84, 19);
+            this.rbSum.TabIndex = 16;
+            this.rbSum.TabStop = true;
+            this.rbSum.Text = "Сложение";
+            this.rbSum.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbMinus
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(495, 84);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 19);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Вычитание";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbMinus.AutoSize = true;
+            this.rbMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbMinus.Location = new System.Drawing.Point(128, 19);
+            this.rbMinus.Name = "rbMinus";
+            this.rbMinus.Size = new System.Drawing.Size(90, 19);
+            this.rbMinus.TabIndex = 17;
+            this.rbMinus.TabStop = true;
+            this.rbMinus.Text = "Вычитание";
+            this.rbMinus.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbMultiply
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.Location = new System.Drawing.Point(386, 109);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(93, 19);
-            this.radioButton3.TabIndex = 18;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Умножение";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbMultiply.AutoSize = true;
+            this.rbMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbMultiply.Location = new System.Drawing.Point(19, 44);
+            this.rbMultiply.Name = "rbMultiply";
+            this.rbMultiply.Size = new System.Drawing.Size(93, 19);
+            this.rbMultiply.TabIndex = 18;
+            this.rbMultiply.TabStop = true;
+            this.rbMultiply.Text = "Умножение";
+            this.rbMultiply.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbDevide
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton4.Location = new System.Drawing.Point(495, 109);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(76, 19);
-            this.radioButton4.TabIndex = 19;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Деление";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbDevide.AutoSize = true;
+            this.rbDevide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbDevide.Location = new System.Drawing.Point(128, 44);
+            this.rbDevide.Name = "rbDevide";
+            this.rbDevide.Size = new System.Drawing.Size(76, 19);
+            this.rbDevide.TabIndex = 19;
+            this.rbDevide.TabStop = true;
+            this.rbDevide.Text = "Деление";
+            this.rbDevide.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -253,7 +255,7 @@ namespace Kursach
             // 
             this.rbOctalSys1.AutoSize = true;
             this.rbOctalSys1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbOctalSys1.Location = new System.Drawing.Point(6, 56);
+            this.rbOctalSys1.Location = new System.Drawing.Point(6, 54);
             this.rbOctalSys1.Name = "rbOctalSys1";
             this.rbOctalSys1.Size = new System.Drawing.Size(110, 19);
             this.rbOctalSys1.TabIndex = 27;
@@ -277,7 +279,7 @@ namespace Kursach
             // 
             this.rbDecimalSys1.AutoSize = true;
             this.rbDecimalSys1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbDecimalSys1.Location = new System.Drawing.Point(6, 80);
+            this.rbDecimalSys1.Location = new System.Drawing.Point(6, 78);
             this.rbDecimalSys1.Name = "rbDecimalSys1";
             this.rbDecimalSys1.Size = new System.Drawing.Size(95, 19);
             this.rbDecimalSys1.TabIndex = 29;
@@ -330,7 +332,7 @@ namespace Kursach
             // 
             this.rbBinarySys2.AutoSize = true;
             this.rbBinarySys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbBinarySys2.Location = new System.Drawing.Point(6, 31);
+            this.rbBinarySys2.Location = new System.Drawing.Point(6, 30);
             this.rbBinarySys2.Name = "rbBinarySys2";
             this.rbBinarySys2.Size = new System.Drawing.Size(82, 19);
             this.rbBinarySys2.TabIndex = 26;
@@ -342,7 +344,7 @@ namespace Kursach
             // 
             this.rbOctalSys2.AutoSize = true;
             this.rbOctalSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbOctalSys2.Location = new System.Drawing.Point(6, 56);
+            this.rbOctalSys2.Location = new System.Drawing.Point(6, 53);
             this.rbOctalSys2.Name = "rbOctalSys2";
             this.rbOctalSys2.Size = new System.Drawing.Size(110, 19);
             this.rbOctalSys2.TabIndex = 27;
@@ -354,7 +356,7 @@ namespace Kursach
             // 
             this.rbDecimalSys2.AutoSize = true;
             this.rbDecimalSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbDecimalSys2.Location = new System.Drawing.Point(6, 80);
+            this.rbDecimalSys2.Location = new System.Drawing.Point(6, 77);
             this.rbDecimalSys2.Name = "rbDecimalSys2";
             this.rbDecimalSys2.Size = new System.Drawing.Size(95, 19);
             this.rbDecimalSys2.TabIndex = 29;
@@ -366,7 +368,7 @@ namespace Kursach
             // 
             this.rbHexaSys2.AutoSize = true;
             this.rbHexaSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbHexaSys2.Location = new System.Drawing.Point(6, 100);
+            this.rbHexaSys2.Location = new System.Drawing.Point(6, 99);
             this.rbHexaSys2.Name = "rbHexaSys2";
             this.rbHexaSys2.Size = new System.Drawing.Size(146, 19);
             this.rbHexaSys2.TabIndex = 28;
@@ -374,12 +376,26 @@ namespace Kursach
             this.rbHexaSys2.Text = "Шестнадцатиричная";
             this.rbHexaSys2.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbDevide);
+            this.groupBox1.Controls.Add(this.rbMultiply);
+            this.groupBox1.Controls.Add(this.rbMinus);
+            this.groupBox1.Controls.Add(this.rbSum);
+            this.groupBox1.Location = new System.Drawing.Point(370, 74);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(237, 69);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Требуемая математическая операция";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(643, 288);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbReqNumSys);
             this.Controls.Add(this.gbOrigNumSys);
             this.Controls.Add(this.comboBox1);
@@ -387,10 +403,6 @@ namespace Kursach
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox5);
@@ -407,6 +419,8 @@ namespace Kursach
             this.gbOrigNumSys.PerformLayout();
             this.gbReqNumSys.ResumeLayout(false);
             this.gbReqNumSys.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,10 +437,10 @@ namespace Kursach
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rbSum;
+        private System.Windows.Forms.RadioButton rbMinus;
+        private System.Windows.Forms.RadioButton rbMultiply;
+        private System.Windows.Forms.RadioButton rbDevide;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
@@ -442,6 +456,7 @@ namespace Kursach
         private System.Windows.Forms.RadioButton rbOctalSys2;
         private System.Windows.Forms.RadioButton rbDecimalSys2;
         private System.Windows.Forms.RadioButton rbHexaSys2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
