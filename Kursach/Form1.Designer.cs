@@ -54,10 +54,10 @@ namespace Kursach
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gbOrigNumSys = new System.Windows.Forms.GroupBox();
             this.gbReqNumSys = new System.Windows.Forms.GroupBox();
-            this.rbHexaSys2 = new System.Windows.Forms.RadioButton();
-            this.rbDecimalSys2 = new System.Windows.Forms.RadioButton();
-            this.rbOctalSys2 = new System.Windows.Forms.RadioButton();
             this.rbBinarySys2 = new System.Windows.Forms.RadioButton();
+            this.rbOctalSys2 = new System.Windows.Forms.RadioButton();
+            this.rbDecimalSys2 = new System.Windows.Forms.RadioButton();
+            this.rbHexaSys2 = new System.Windows.Forms.RadioButton();
             this.gbOrigNumSys.SuspendLayout();
             this.gbReqNumSys.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@ namespace Kursach
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(59, 21);
+            this.label1.Location = new System.Drawing.Point(393, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 15);
             this.label1.TabIndex = 1;
@@ -88,7 +88,7 @@ namespace Kursach
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(335, 21);
+            this.label2.Location = new System.Drawing.Point(19, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(239, 15);
             this.label2.TabIndex = 2;
@@ -326,29 +326,17 @@ namespace Kursach
             this.gbReqNumSys.TabStop = false;
             this.gbReqNumSys.Text = "Требуемая система счисления";
             // 
-            // rbHexaSys2
+            // rbBinarySys2
             // 
-            this.rbHexaSys2.AutoSize = true;
-            this.rbHexaSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbHexaSys2.Location = new System.Drawing.Point(6, 100);
-            this.rbHexaSys2.Name = "rbHexaSys2";
-            this.rbHexaSys2.Size = new System.Drawing.Size(146, 19);
-            this.rbHexaSys2.TabIndex = 28;
-            this.rbHexaSys2.TabStop = true;
-            this.rbHexaSys2.Text = "Шестнадцатиричная";
-            this.rbHexaSys2.UseVisualStyleBackColor = true;
-            // 
-            // rbDecimalSys2
-            // 
-            this.rbDecimalSys2.AutoSize = true;
-            this.rbDecimalSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbDecimalSys2.Location = new System.Drawing.Point(6, 80);
-            this.rbDecimalSys2.Name = "rbDecimalSys2";
-            this.rbDecimalSys2.Size = new System.Drawing.Size(95, 19);
-            this.rbDecimalSys2.TabIndex = 29;
-            this.rbDecimalSys2.TabStop = true;
-            this.rbDecimalSys2.Text = "Десятичная";
-            this.rbDecimalSys2.UseVisualStyleBackColor = true;
+            this.rbBinarySys2.AutoSize = true;
+            this.rbBinarySys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbBinarySys2.Location = new System.Drawing.Point(6, 31);
+            this.rbBinarySys2.Name = "rbBinarySys2";
+            this.rbBinarySys2.Size = new System.Drawing.Size(82, 19);
+            this.rbBinarySys2.TabIndex = 26;
+            this.rbBinarySys2.TabStop = true;
+            this.rbBinarySys2.Text = "Двоичная";
+            this.rbBinarySys2.UseVisualStyleBackColor = true;
             // 
             // rbOctalSys2
             // 
@@ -362,17 +350,29 @@ namespace Kursach
             this.rbOctalSys2.Text = "Восьмеричная";
             this.rbOctalSys2.UseVisualStyleBackColor = true;
             // 
-            // rbBinarySys2
+            // rbDecimalSys2
             // 
-            this.rbBinarySys2.AutoSize = true;
-            this.rbBinarySys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbBinarySys2.Location = new System.Drawing.Point(6, 31);
-            this.rbBinarySys2.Name = "rbBinarySys2";
-            this.rbBinarySys2.Size = new System.Drawing.Size(82, 19);
-            this.rbBinarySys2.TabIndex = 26;
-            this.rbBinarySys2.TabStop = true;
-            this.rbBinarySys2.Text = "Двоичная";
-            this.rbBinarySys2.UseVisualStyleBackColor = true;
+            this.rbDecimalSys2.AutoSize = true;
+            this.rbDecimalSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbDecimalSys2.Location = new System.Drawing.Point(6, 80);
+            this.rbDecimalSys2.Name = "rbDecimalSys2";
+            this.rbDecimalSys2.Size = new System.Drawing.Size(95, 19);
+            this.rbDecimalSys2.TabIndex = 29;
+            this.rbDecimalSys2.TabStop = true;
+            this.rbDecimalSys2.Text = "Десятичная";
+            this.rbDecimalSys2.UseVisualStyleBackColor = true;
+            // 
+            // rbHexaSys2
+            // 
+            this.rbHexaSys2.AutoSize = true;
+            this.rbHexaSys2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbHexaSys2.Location = new System.Drawing.Point(6, 100);
+            this.rbHexaSys2.Name = "rbHexaSys2";
+            this.rbHexaSys2.Size = new System.Drawing.Size(146, 19);
+            this.rbHexaSys2.TabIndex = 28;
+            this.rbHexaSys2.TabStop = true;
+            this.rbHexaSys2.Text = "Шестнадцатиричная";
+            this.rbHexaSys2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
