@@ -55,13 +55,13 @@ namespace Kursach
             //десятичная в двоичную и обратно
             if (rbDecimalSys1.Checked == true && rbBinarySys2.Checked == true)
             {
-                int decimalNumber = int.Parse(textBox1.Text);
-                textBox2.Text = Convert.ToString(decimalNumber, 2);
+                int decimalValue = Convert.ToInt32(textBox1.Text, 10);
+                textBox2.Text = Convert.ToString(decimalValue, 2);
             }
             if (rbBinarySys1.Checked == true && rbDecimalSys2.Checked == true)
             {
-                int binaryNumber = Convert.ToInt32(textBox1.Text, 2);
-                textBox2.Text = binaryNumber.ToString();
+                int decimalValue = Convert.ToInt32(textBox1.Text, 2);
+                textBox2.Text = Convert.ToString(decimalValue, 10);
             }
             //двоичная в восьмиричную и обратно
             if (rbOctalSys1.Checked == true && rbBinarySys2.Checked == true)
@@ -85,7 +85,39 @@ namespace Kursach
                 int decimalValue = Convert.ToInt32(textBox1.Text, 2);
                 textBox2.Text = Convert.ToString(decimalValue, 16);
             }
-
+            //восьмиричная в десятичную и обратно
+            if (rbOctalSys1.Checked == true && rbDecimalSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 8);
+                textBox2.Text = Convert.ToString(decimalValue, 10);
+            }
+            if (rbDecimalSys1.Checked == true && rbOctalSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 10);
+                textBox2.Text = Convert.ToString(decimalValue, 8);
+            }
+            //восьмиричная в шестнадцатиричную и обратно
+            if (rbOctalSys1.Checked == true && rbHexaSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 8);
+                textBox2.Text = Convert.ToString(decimalValue, 16);
+            }
+            if (rbHexaSys1.Checked == true && rbOctalSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 16);
+                textBox2.Text = Convert.ToString(decimalValue, 8);
+            }
+            //десятичная в шестнадцатиричную и обратно
+            if (rbDecimalSys1.Checked == true && rbHexaSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 10);
+                textBox2.Text = Convert.ToString(decimalValue, 16);
+            }
+            if (rbHexaSys1.Checked == true && rbDecimalSys2.Checked == true)
+            {
+                int decimalValue = Convert.ToInt32(textBox1.Text, 16);
+                textBox2.Text = Convert.ToString(decimalValue, 10);
+            }
         }
         
     }

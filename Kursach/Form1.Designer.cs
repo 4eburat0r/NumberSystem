@@ -66,7 +66,7 @@ namespace Kursach
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(226, 268);
+            this.button1.Location = new System.Drawing.Point(261, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 24);
             this.button1.TabIndex = 0;
@@ -77,27 +77,27 @@ namespace Kursach
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(393, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(100, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 15);
+            this.label1.Size = new System.Drawing.Size(141, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Операция перевода";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(19, 21);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(354, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 15);
+            this.label2.Size = new System.Drawing.Size(273, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Проведение математических операций";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(117, 62);
+            this.textBox1.Location = new System.Drawing.Point(119, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(122, 21);
             this.textBox1.TabIndex = 8;
@@ -106,7 +106,7 @@ namespace Kursach
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(79, 221);
+            this.textBox2.Location = new System.Drawing.Point(81, 209);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(104, 21);
             this.textBox2.TabIndex = 9;
@@ -115,7 +115,7 @@ namespace Kursach
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(325, 62);
+            this.textBox3.Location = new System.Drawing.Point(357, 171);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(122, 21);
             this.textBox3.TabIndex = 10;
@@ -124,7 +124,7 @@ namespace Kursach
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(396, 221);
+            this.textBox5.Location = new System.Drawing.Point(428, 209);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(104, 21);
             this.textBox5.TabIndex = 12;
@@ -134,7 +134,7 @@ namespace Kursach
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Location = new System.Drawing.Point(14, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 13;
@@ -144,7 +144,7 @@ namespace Kursach
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 227);
+            this.label4.Location = new System.Drawing.Point(14, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 15);
             this.label4.TabIndex = 14;
@@ -154,7 +154,7 @@ namespace Kursach
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.Location = new System.Drawing.Point(348, 129);
+            this.radioButton1.Location = new System.Drawing.Point(386, 84);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(84, 19);
             this.radioButton1.TabIndex = 16;
@@ -166,7 +166,7 @@ namespace Kursach
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(348, 152);
+            this.radioButton2.Location = new System.Drawing.Point(495, 84);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(90, 19);
             this.radioButton2.TabIndex = 17;
@@ -178,7 +178,7 @@ namespace Kursach
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.Location = new System.Drawing.Point(348, 175);
+            this.radioButton3.Location = new System.Drawing.Point(386, 109);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(93, 19);
             this.radioButton3.TabIndex = 18;
@@ -190,7 +190,7 @@ namespace Kursach
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton4.Location = new System.Drawing.Point(348, 198);
+            this.radioButton4.Location = new System.Drawing.Point(495, 109);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(76, 19);
             this.radioButton4.TabIndex = 19;
@@ -202,7 +202,7 @@ namespace Kursach
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(351, 44);
+            this.label5.Location = new System.Drawing.Point(383, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 20;
@@ -212,7 +212,7 @@ namespace Kursach
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(322, 227);
+            this.label6.Location = new System.Drawing.Point(354, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 15);
             this.label6.TabIndex = 21;
@@ -221,7 +221,7 @@ namespace Kursach
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(453, 62);
+            this.textBox4.Location = new System.Drawing.Point(495, 171);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(122, 21);
             this.textBox4.TabIndex = 22;
@@ -231,7 +231,7 @@ namespace Kursach
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(474, 44);
+            this.label7.Location = new System.Drawing.Point(522, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 15);
             this.label7.TabIndex = 23;
@@ -294,7 +294,7 @@ namespace Kursach
             "8 (восьмиричная)",
             "10 (десятичная)",
             "16 (шестнадцатиричная)"});
-            this.comboBox1.Location = new System.Drawing.Point(348, 96);
+            this.comboBox1.Location = new System.Drawing.Point(386, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(199, 23);
             this.comboBox1.TabIndex = 33;
@@ -306,7 +306,7 @@ namespace Kursach
             this.gbOrigNumSys.Controls.Add(this.rbOctalSys1);
             this.gbOrigNumSys.Controls.Add(this.rbDecimalSys1);
             this.gbOrigNumSys.Controls.Add(this.rbHexaSys1);
-            this.gbOrigNumSys.Location = new System.Drawing.Point(5, 93);
+            this.gbOrigNumSys.Location = new System.Drawing.Point(11, 43);
             this.gbOrigNumSys.Name = "gbOrigNumSys";
             this.gbOrigNumSys.Size = new System.Drawing.Size(159, 125);
             this.gbOrigNumSys.TabIndex = 34;
@@ -319,7 +319,7 @@ namespace Kursach
             this.gbReqNumSys.Controls.Add(this.rbOctalSys2);
             this.gbReqNumSys.Controls.Add(this.rbDecimalSys2);
             this.gbReqNumSys.Controls.Add(this.rbHexaSys2);
-            this.gbReqNumSys.Location = new System.Drawing.Point(170, 93);
+            this.gbReqNumSys.Location = new System.Drawing.Point(176, 44);
             this.gbReqNumSys.Name = "gbReqNumSys";
             this.gbReqNumSys.Size = new System.Drawing.Size(159, 125);
             this.gbReqNumSys.TabIndex = 35;
@@ -379,7 +379,7 @@ namespace Kursach
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(586, 302);
+            this.ClientSize = new System.Drawing.Size(643, 288);
             this.Controls.Add(this.gbReqNumSys);
             this.Controls.Add(this.gbOrigNumSys);
             this.Controls.Add(this.comboBox1);
