@@ -164,7 +164,7 @@ namespace Kursach
                 int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
                 textBox5.Text = Convert.ToString(hexalValue1 + hexalValue2, 16);
             }
-            //сложение двоичных чисел
+            //деление двоичных чисел
             if (rbDevide.Checked == true && comboBox1.SelectedIndex == 0)
             {
                 int binaryValue1 = Convert.ToInt32(textBox3.Text, 2);
