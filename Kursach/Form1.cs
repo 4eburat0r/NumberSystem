@@ -136,6 +136,7 @@ namespace Kursach
                 textBox2.Text = Convert.ToString(hexaValue, 10);
             }
             //---ПРОВЕДЕНИЕ МАТЕМАТИЧЕСКИХ ОПЕРАЦИЙ---
+            //СЛОЖЕНИЕ
             //сложение двоичных чисел
             if (rbSum.Checked == true && comboBox1.SelectedIndex == 0)
             {
@@ -164,6 +165,65 @@ namespace Kursach
                 int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
                 textBox5.Text = Convert.ToString(hexalValue1 + hexalValue2, 16);
             }
+            //ВЫЧИТАНИЕ
+            //вычитание двоичных чисел
+            if (rbMinus.Checked == true && comboBox1.SelectedIndex == 0)
+            {
+                int binaryValue1 = Convert.ToInt32(textBox3.Text, 2);
+                int binaryValue2 = Convert.ToInt32(textBox4.Text, 2);
+                textBox5.Text = Convert.ToString(binaryValue1 - binaryValue2, 2);
+            }
+            //вычитание восьмиричных чисел
+            if (rbMinus.Checked == true && comboBox1.SelectedIndex == 1)
+            {
+                int octalValue1 = Convert.ToInt32(textBox3.Text, 8);
+                int octalValue2 = Convert.ToInt32(textBox4.Text, 8);
+                textBox5.Text = Convert.ToString(octalValue1 - octalValue2, 8);
+            }
+            //вычитание десятичных чисел
+            if (rbMinus.Checked == true && comboBox1.SelectedIndex == 2)
+            {
+                int decimalValue1 = Convert.ToInt32(textBox3.Text, 10);
+                int decimalValue2 = Convert.ToInt32(textBox4.Text, 10);
+                textBox5.Text = Convert.ToString(decimalValue1 - decimalValue2, 10);
+            }
+            //вычитание шестнадцатиричных чисел
+            if (rbMinus.Checked == true && comboBox1.SelectedIndex == 3)
+            {
+                int hexalValue1 = Convert.ToInt32(textBox3.Text, 16);
+                int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
+                textBox5.Text = Convert.ToString(hexalValue1 - hexalValue2, 16);
+            }
+            //УМНОЖЕНИЕ
+            //умножение двоичных чисел
+            if (rbMultiply.Checked == true && comboBox1.SelectedIndex == 0)
+            {
+                int binaryValue1 = Convert.ToInt32(textBox3.Text, 2);
+                int binaryValue2 = Convert.ToInt32(textBox4.Text, 2);
+                textBox5.Text = Convert.ToString(binaryValue1 * binaryValue2, 2);
+            }
+            //умножение восьмиричных чисел
+            if (rbMultiply.Checked == true && comboBox1.SelectedIndex == 1)
+            {
+                int octalValue1 = Convert.ToInt32(textBox3.Text, 8);
+                int octalValue2 = Convert.ToInt32(textBox4.Text, 8);
+                textBox5.Text = Convert.ToString(octalValue1 * octalValue2, 8);
+            }
+            //умножение десятичных чисел
+            if (rbMultiply.Checked == true && comboBox1.SelectedIndex == 2)
+            {
+                int decimalValue1 = Convert.ToInt32(textBox3.Text, 10);
+                int decimalValue2 = Convert.ToInt32(textBox4.Text, 10);
+                textBox5.Text = Convert.ToString(decimalValue1 * decimalValue2, 10);
+            }
+            //умножение шестнадцатиричных чисел
+            if (rbMultiply.Checked == true && comboBox1.SelectedIndex == 3)
+            {
+                int hexalValue1 = Convert.ToInt32(textBox3.Text, 16);
+                int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
+                textBox5.Text = Convert.ToString(hexalValue1 * hexalValue2, 16);
+            }
+            //ДЕЛЕНИЕ   
             //деление двоичных чисел
             if (rbDevide.Checked == true && comboBox1.SelectedIndex == 0)
             {
@@ -171,7 +231,27 @@ namespace Kursach
                 int binaryValue2 = Convert.ToInt32(textBox4.Text, 2);
                 textBox5.Text = Convert.ToString(binaryValue1 / binaryValue2, 2);
             }
+            //деление восьмиричных чисел
+            if (rbDevide.Checked == true && comboBox1.SelectedIndex == 1)
+            {
+                int octalValue1 = Convert.ToInt32(textBox3.Text, 8);
+                int octalValue2 = Convert.ToInt32(textBox4.Text, 8);
+                textBox5.Text = Convert.ToString(octalValue1 / octalValue2, 8);
+            }
+            //деление десятичных чисел
+            if (rbDevide.Checked == true && comboBox1.SelectedIndex == 2)
+            {
+                int decimalValue1 = Convert.ToInt32(textBox3.Text, 10);
+                int decimalValue2 = Convert.ToInt32(textBox4.Text, 10);
+                textBox5.Text = Convert.ToString(decimalValue1 / decimalValue2, 10);
+            }
+            //деление шестнадцатиричных чисел
+            if (rbDevide.Checked == true && comboBox1.SelectedIndex == 3)
+            {
+                int hexalValue1 = Convert.ToInt32(textBox3.Text, 16);
+                int hexalValue2 = Convert.ToInt32(textBox4.Text, 16);
+                textBox5.Text = Convert.ToString(hexalValue1 / hexalValue2, 16);
+            }
         }
-        
     }
 }
