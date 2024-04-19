@@ -16,28 +16,59 @@ namespace Kursach
         {
             InitializeComponent();
         }
-        //функция проверки ввода данных в textbox
-        bool checkInput(object sender, KeyPressEventArgs e, TextBox textBox)
+        // || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44
+        //функция проверки ввода данных в textbox для перевода чисел
+        bool checkInput1(object sender, KeyPressEventArgs e, TextBox textBox)
         {
-            if (rbBinarySys1.Checked == true || comboBox1.SelectedIndex == 0)
+            if (rbBinarySys1.Checked == true)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8))
                     return false;
                 else return true;
             }
-            if (rbOctalSys1.Checked == true || comboBox1.SelectedIndex == 1)
+            if (rbOctalSys1.Checked == true)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8))
                     return false;
                 else return true;
             }
-            if (rbDecimalSys1.Checked == true || comboBox1.SelectedIndex == 2)
+            if (rbDecimalSys1.Checked == true)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8))
                     return false;
                 else return true;
             }
-            if (rbHexaSys1.Checked == true || comboBox1.SelectedIndex == 3)
+            if (rbHexaSys1.Checked == true)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8 
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                    return false;
+                else return true;
+            }
+            else return true;
+        }
+        //функция проверки ввода данных в textbox для проведения математических операций
+        bool checkInput2(object sender, KeyPressEventArgs e, TextBox textBox)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8))
+                    return false;
+                else return true;
+            }
+            if (comboBox1.SelectedIndex == 1)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8))
+                    return false;
+                else return true;
+            }
+            if (comboBox1.SelectedIndex == 2)
+            {
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8))
+                    return false;
+                else return true;
+            }
+            if (comboBox1.SelectedIndex == 3)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
                 || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
@@ -48,15 +79,15 @@ namespace Kursach
         }
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (checkInput(sender, e, textBox1) == false) e.KeyChar = (char)0;
+            if (checkInput1(sender, e, textBox1) == false) e.KeyChar = (char)0;
         }
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (checkInput(sender, e, textBox3) == false) e.KeyChar = (char)0;
+            if (checkInput2(sender, e, textBox3) == false) e.KeyChar = (char)0;
         }
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (checkInput(sender, e, textBox4) == false) e.KeyChar = (char)0;
+            if (checkInput2(sender, e, textBox4) == false) e.KeyChar = (char)0;
         }
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
