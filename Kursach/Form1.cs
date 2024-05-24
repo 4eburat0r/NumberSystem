@@ -288,7 +288,6 @@ namespace Kursach
             }
             catch (Exception ex)
             {
-                //textBox5.Text = ex.Message;
                 MessageBox.Show(ex.Message);
             }
         }
