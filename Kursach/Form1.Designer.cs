@@ -414,7 +414,7 @@ namespace Kursach
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Системы счисления";
+            this.Text = "git ";
             this.gbOrigNumSys.ResumeLayout(false);
             this.gbOrigNumSys.PerformLayout();
             this.gbReqNumSys.ResumeLayout(false);

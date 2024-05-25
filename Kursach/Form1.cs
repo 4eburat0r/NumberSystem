@@ -16,32 +16,32 @@ namespace Kursach
         {
             InitializeComponent();
         }
-        // || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44
         //функция проверки ввода данных в textbox для перевода чисел
         bool checkInput1(object sender, KeyPressEventArgs e, TextBox textBox)
         {
             if (rbBinarySys1.Checked == true)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (rbOctalSys1.Checked == true)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (rbDecimalSys1.Checked == true)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (rbHexaSys1.Checked == true)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
-                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102) || 
+                ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
@@ -52,26 +52,27 @@ namespace Kursach
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '1' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '7' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8))
+                if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8 || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
             if (comboBox1.SelectedIndex == 3)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
-                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)
+                || ((e.KeyChar == 45) && (textBox.Text.Length == 0)) || (int)e.KeyChar == 44))
                     return false;
                 else return true;
             }
@@ -96,6 +97,15 @@ namespace Kursach
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
             textBox5.ReadOnly = true;
+        }
+        double binaryToDecimal(TextBox textbox)
+        {
+            double binaryNum = Convert.ToDouble(textbox);
+            double sum;
+            for(int i = 0; i < sizeof(binaryNum); i++)
+            {
+
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -271,13 +281,14 @@ namespace Kursach
                     int octalValue2 = Convert.ToInt32(textBox4.Text, 8);
                     textBox5.Text = Convert.ToString(octalValue1 / octalValue2, 8);
                 }
-                //деление десятичных чисел
-                if (rbDevide.Checked == true && comboBox1.SelectedIndex == 2)
+                // Деление десятичных чисел с типом данных double
+                if (rbDevide.Checked && comboBox1.SelectedIndex == 2)
                 {
-                    int decimalValue1 = Convert.ToInt32(textBox3.Text, 10);
-                    int decimalValue2 = Convert.ToInt32(textBox4.Text, 10);
-                    textBox5.Text = Convert.ToString(decimalValue1 / decimalValue2, 10);
+                    double decimalValue1 = Convert.ToDouble(textBox3.Text);
+                    double decimalValue2 = Convert.ToDouble(textBox4.Text);
+                    textBox5.Text = Convert.ToString(decimalValue1 / decimalValue2);
                 }
+
                 //деление шестнадцатиричных чисел
                 if (rbDevide.Checked == true && comboBox1.SelectedIndex == 3)
                 {
