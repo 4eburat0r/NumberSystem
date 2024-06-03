@@ -92,7 +92,7 @@ namespace Kursach
         {
             textBox2.ReadOnly = true;
         }
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             textBox5.ReadOnly = true;
         }
