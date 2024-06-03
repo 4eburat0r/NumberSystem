@@ -40,7 +40,7 @@ namespace Kursach
             if (rbHexaSys1.Checked == true)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
-                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)))
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70)))
                     return false;
                 else return true;
             }
@@ -70,8 +70,7 @@ namespace Kursach
             if (comboBox1.SelectedIndex == 3)
             {
                 if (!(e.KeyChar >= '0' && e.KeyChar <= '9' || (int)e.KeyChar == 8
-                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70) || ((int)e.KeyChar >= 97 && (int)e.KeyChar <= 102)
-                ))
+                || ((int)e.KeyChar >= 65 && (int)e.KeyChar <= 70)))
                     return false;
                 else return true;
             }
@@ -97,26 +96,25 @@ namespace Kursach
         {
             textBox5.ReadOnly = true;
         }
-        const int base10 = 10;
         char[] cHexa = new char[] { 'A', 'B', 'C', 'D', 'E', 'F' };
         int[] iHexaNumeric = new int[] { 10, 11, 12, 13, 14, 15 };
         int[] iHexaIndices = new int[] { 0, 1, 2, 3, 4, 5 };
-        const int asciiDiff = 48;
         string DecimalToBase(int iDec, int numbase)
         {
             string strBin = "";
             int[] result = new int[32];
             int MaxBit = 32;
-            for (; iDec > 0; iDec /= numbase)
+            while(iDec > 0)
             {
                 int rem = iDec % numbase;
                 result[--MaxBit] = rem;
+                iDec /= numbase;
             }
             for (int i = 0; i < result.Length; i++)
-                if ((int)result.GetValue(i) >= base10)
-                    strBin += cHexa[(int)result.GetValue(i) % base10];
+                if (result[i] >= 10)
+                    strBin += cHexa[result[i] % 10];  
                 else
-                    strBin += result.GetValue(i);
+                    strBin += result[i];
             strBin = strBin.TrimStart(new char[] { '0' });
             return strBin;
         }
@@ -126,16 +124,16 @@ namespace Kursach
             int b;
             int iProduct = 1;
             string sHexa = "";
-            if (numbase > base10)
+            if (numbase > 10)
                 for (int i = 0; i < cHexa.Length; i++)
-                    sHexa += cHexa.GetValue(i).ToString();
+                    sHexa += cHexa[i].ToString();
             for (int i = sBase.Length - 1; i >= 0; i--, iProduct *= numbase)
             {
                 string sValue = sBase[i].ToString();
                 if (sValue.IndexOfAny(cHexa) >= 0)
                     b = iHexaNumeric[sHexa.IndexOf(sBase[i])];
                 else
-                    b = (int)sBase[i] - asciiDiff;
+                    b = (int)sBase[i] - 48;
                 dec += (b * iProduct);
             }
             return dec;
@@ -147,14 +145,10 @@ namespace Kursach
                 //---ОПЕРАЦИИ ПЕРЕВОДА--- 
                 //десятичная в двоичную и обратно
                 if (rbDecimalSys1.Checked == true && rbBinarySys2.Checked == true)
-                {
                     textBox2.Text = DecimalToBase(Int32.Parse(textBox1.Text), 2);
-                }
+
                 if (rbBinarySys1.Checked == true && rbDecimalSys2.Checked == true)
-                {
-                    int binaryValue = Convert.ToInt32(textBox1.Text, 2);
-                    textBox2.Text = Convert.ToString(binaryValue, 10);
-                }
+                    textBox2.Text = Convert.ToString(BaseToDecimal(textBox1.Text.ToString(), 2));
                 //двоичная в восьмиричную и обратно
                 if (rbOctalSys1.Checked == true && rbBinarySys2.Checked == true)
                 {
@@ -179,15 +173,10 @@ namespace Kursach
                 }
                 //восьмиричная в десятичную и обратно
                 if (rbOctalSys1.Checked == true && rbDecimalSys2.Checked == true)
-                {
-                    int octalValue = Convert.ToInt32(textBox1.Text, 8);
-                    textBox2.Text = Convert.ToString(octalValue, 10);
-                }
+                    textBox2.Text = Convert.ToString(BaseToDecimal(textBox1.Text.ToString(), 8));
+
                 if (rbDecimalSys1.Checked == true && rbOctalSys2.Checked == true)
-                {
-                    int decimalValue = Convert.ToInt32(textBox1.Text, 10);
-                    textBox2.Text = Convert.ToString(decimalValue, 8);
-                }
+                    textBox2.Text = DecimalToBase(Int32.Parse(textBox1.Text), 8);
                 //восьмиричная в шестнадцатиричную и обратно
                 if (rbOctalSys1.Checked == true && rbHexaSys2.Checked == true)
                 {
@@ -201,15 +190,10 @@ namespace Kursach
                 }
                 //десятичная в шестнадцатиричную и обратно
                 if (rbDecimalSys1.Checked == true && rbHexaSys2.Checked == true)
-                {
-                    int decimalValue = Convert.ToInt32(textBox1.Text, 10);
-                    textBox2.Text = Convert.ToString(decimalValue, 16);
-                }
+                    textBox2.Text = DecimalToBase(Int32.Parse(textBox1.Text), 16);
+
                 if (rbHexaSys1.Checked == true && rbDecimalSys2.Checked == true)
-                {
-                    int hexaValue = Convert.ToInt32(textBox1.Text, 16);
-                    textBox2.Text = Convert.ToString(hexaValue, 10);
-                }
+                    textBox2.Text = Convert.ToString(BaseToDecimal(textBox1.Text.ToString(), 16));
                 //---ПРОВЕДЕНИЕ МАТЕМАТИЧЕСКИХ ОПЕРАЦИЙ---
                 //СЛОЖЕНИЕ
                 //сложение двоичных чисел
@@ -320,7 +304,6 @@ namespace Kursach
                     double decimalValue2 = Convert.ToDouble(textBox4.Text);
                     textBox5.Text = Convert.ToString(decimalValue1 / decimalValue2);
                 }
-
                 //деление шестнадцатиричных чисел
                 if (rbDevide.Checked == true && comboBox1.SelectedIndex == 3)
                 {
